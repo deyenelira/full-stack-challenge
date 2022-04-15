@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :lends
   resources :books
   devise_for :users
+  
+  scope "/admin" do
+    resources :users
+  end
 
   devise_scope :user do
     authenticated :user do
