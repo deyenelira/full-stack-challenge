@@ -26,7 +26,7 @@ class Lend < ApplicationRecord
   end
 
   def book_is_valid?
-    if Lend.find_by(book_id: book_id).id != id
+    if Lend.find_by(book_id: book_id)&.id != id
       errors.add(:book_id, "this book has already been borrowed")
     end
   end
