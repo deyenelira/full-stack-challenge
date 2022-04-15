@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
   has_many :lends
-  validates :title, uniqueness: true, presence: true
+  validates :name, uniqueness: true, presence: true
 end
