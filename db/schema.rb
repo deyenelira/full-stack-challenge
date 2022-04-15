@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2022_04_15_010044) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "title"
     t.string "author"
   end
 
@@ -28,7 +27,6 @@ ActiveRecord::Schema.define(version: 2022_04_15_010044) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.datetime "loan_date"
     t.datetime "return_date"
     t.index ["book_id"], name: "index_lends_on_book_id"
     t.index ["user_id"], name: "index_lends_on_user_id"
