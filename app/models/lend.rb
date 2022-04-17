@@ -11,7 +11,7 @@ class Lend < ApplicationRecord
     elsif return_date < DateTime.now
       errors.add(:return_date, "can not be less than borrow date")
     elsif return_date > (DateTime.now + 6.months)
-      errors.add(:return_date, "can not be more than 6 months from the loan date")
+      errors.add(:return_date, "can not be more than 6 months from the borrow date")
     end
   end
 
